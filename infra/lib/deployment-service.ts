@@ -47,16 +47,16 @@ export class DeploymentService extends Construct {
       distributionPaths: ["/*"],
     });
 
-    new CfnOutput(this, "CloudFrontURL", {
+    new CfnOutput(this, "Task3CloudFrontURL", {
       value: distribution.domainName,
       description: "The distribution URL",
-      exportName: "CloudfrontURL",
+      exportName: "Task3CloudFrontURL",
     });
 
-    new CfnOutput(this, "BucketName", {
+    new CfnOutput(this, "Task3BucketName", {
       value: hostingBucket.bucketName,
       description: "The name of the S3 bucket",
-      exportName: "BucketName",
+      exportName: "Task3BucketName",
     });
   }
 }
