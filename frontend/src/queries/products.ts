@@ -11,7 +11,7 @@ export function useAvailableProducts() {
       const res = await axios.get<{ data: AvailableProduct[], message: string, success: boolean}>(
         `${API_PATHS.bff}/products`
       );
-      console.log('res', res.data.data);
+      console.log('res', res.data);
       return res.data.data;
     }
   );
